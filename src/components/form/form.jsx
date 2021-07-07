@@ -230,9 +230,9 @@ class Form extends React.Component {
 
                         <header className="form-header">
                             <span>   PERSON ADDRESS FORM </span>
-                            <div>
+                            <span>
                                 <Link to=''><img className="cancel-img" src={cancelButton} alt="" /></Link>
-                            </div>
+                            </span>
                         </header>
 
                         <div className="row-content">
@@ -250,7 +250,7 @@ class Form extends React.Component {
 
                         </div>
 
-                        <div className="row-content">
+                        <div className="row-content field ">
 
                             <input type="text" name="city" value={this.state.city} placeholder="Enter City" id="city" onChange={this.onChangeHandler} />
                             <valid-message className="valid-name" htmlFor="city">{this.state.valid.city}</valid-message>

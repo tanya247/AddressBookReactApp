@@ -5,15 +5,15 @@ import './header.scss'
 export default class Header extends Component {
     render() {
         return (
-            <header className="headerContainer header">
-                <div className="logoContainer">
-                    <img src={logo} alt="" />
-                    <div className="text">
-                        <span className="address-text">Address</span><br />
-                        <span className="address-text book">Book</span>
-                    </div>
+            <header className ="header-content header">
+            <div className ="logo-content">
+                <img className ="image" src = {logo}/>
+                <div>
+                    <span className ="add-text">ADDRESS</span><br/>
+                    <span className="add-text add-book">BOOK</span>
                 </div>
-            </header>
+            </div>
+        </header>
 
         )
     }
