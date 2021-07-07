@@ -26,6 +26,7 @@ class HomePage extends React.Component {
                 let responseData = ResponseDTO.data;
                 this.setState({ allAddressBookArray: responseData.data })
                 this.setState({ addressBookArray: responseData.data })
+                console.log(this.state.addressBookArray);
             }).catch(error => {
                 console.log(error);
             })
@@ -52,8 +53,7 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                         <div className="search-box" onClick={this.openSearch}>
-                            <input className={"search-input " + (this.state.searchExpand && "input-expand")}
-                                onChange={this.search} type="text" />
+                            <input className="search-input" onChange={this.search} type="text" />
                             <img className="search-icon" src={searchIcon} alt="Search Icon" />
                         </div>
                         <Link to="form" className="add-button">

@@ -34,15 +34,15 @@ const AddressBookList = (props) => {
         </tr>
         {
           props.addressBookArray && props.addressBookArray.map((contact) => (
-            <tr key={contact.id}>
+            <tr key={contact.addressBookId}>
               <td>{contact.name}</td>
               <td>{contact.address}</td>
               <td>{contact.city}</td>
               <td>{contact.state}</td>
               <td>{contact.zip}</td>
-              <td>{contact.phoneNumber}</td>
-              <td><img src={deleteIcon} onClick={() => remove(contact.id)} alt="delete" />
-                <img src={editIcon} onClick={() => edit(contact.id)} alt="edit" /></td>
+              <td>{contact.phoneNo}</td>
+              <td><img src={deleteIcon} onClick={() => remove(contact.addressBookId)} alt="delete" />
+                <img src={editIcon} onClick={() => edit(contact.addressBookId)} alt="edit" /></td>
             </tr>
           ))
         }

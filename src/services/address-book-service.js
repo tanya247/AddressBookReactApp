@@ -14,7 +14,7 @@ export default class AddressBookService {
         return AxiosService.getService(`${baseUrl}/get/${id}`,id);
     }
     updateAddressBook(data) {
-        return AxiosService.putService(`${baseUrl}/update/${data.id}`, data);
+        return AxiosService.putService(`${baseUrl}/update/${data.addressBookId}`, data);
     }
     deleteAddressBook(id) {
         return AxiosService.deleteService(`${baseUrl}/delete/${id}`);

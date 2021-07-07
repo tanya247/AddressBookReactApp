@@ -82,13 +82,13 @@ class Form extends React.Component {
     }
     setContactData = (contact) => {
         this.setState({
-            id: contact.id,
+            id: contact.addressBookId,
             name: contact.name,
             address: contact.address,
             city: contact.city,
             state: contact.state,
             zip: contact.zip,
-            phoneNumber: contact.phoneNumber,
+            phoneNumber: contact.phoneNo,
             isUpdate: true
         });
     }
@@ -188,13 +188,15 @@ class Form extends React.Component {
         event.preventDefault();
         event.stopPropagation();
         let contactObject = {
+            addressBookId:this.state.id,
             name: this.state.name,
             address: this.state.address,
             city: this.state.city,
             state: this.state.state,
             zip: this.state.zip,
-            phoneNumber: this.state.phoneNumber
+            phoneNo: this.state.phoneNumber
         }
+        console.log(contactObject);
         if (this.state.isUpdate) {
             new AddressBookService().updateAddressBook(contactObject)
                 .then(responseText => {
